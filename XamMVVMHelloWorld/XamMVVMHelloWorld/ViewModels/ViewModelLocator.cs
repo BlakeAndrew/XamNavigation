@@ -17,7 +17,6 @@ namespace XamMVVMHelloWorld.ViewModels
             SimpleIoc.Default.Register<MainPageViewModel>();
             SimpleIoc.Default.Register<DetailsPageViewModel>();
             SimpleIoc.Default.Register<EndPageViewModel>();
-            //SimpleIoc.Default.Register<INavigationService>();
         }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance",

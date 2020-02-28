@@ -13,10 +13,6 @@ namespace XamMVVMHelloWorld.ViewModels
         private readonly INavigationService _navigationService;
         public RelayCommand NavigationCommand { get; set; }
 
-        //public DetailsPageViewModel()
-        //{
-
-        //}
         public DetailsPageViewModel(INavigationService navigationService)
         {
             if (navigationService == null) throw new ArgumentNullException("navigationService");

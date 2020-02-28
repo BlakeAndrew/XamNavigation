@@ -5,6 +5,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using XamMVVMHelloWorld.Navigation.Service;
 using XamMVVMHelloWorld.ViewModels;
+using XamMVVMHelloWorld.Views;
 
 namespace XamMVVMHelloWorld
 {
@@ -23,20 +24,16 @@ namespace XamMVVMHelloWorld
 
             var nav = new NavigationService();
             nav.Configure(ViewModelLocator.MainPage, typeof(MainPage));
-            nav.Configure(ViewModelLocator.DetailsPageView, typeof(DetailsPageViewModel));
-            nav.Configure(ViewModelLocator.EndPageView, typeof(EndPageViewModel));
+            nav.Configure(ViewModelLocator.DetailsPageView, typeof(DetailsPageView));
+            nav.Configure(ViewModelLocator.EndPageView, typeof(EndPageView));
             SimpleIoc.Default.Register<INavigationService>(() => nav);
 
             var firstPage = new NavigationPage(new MainPage());
 
             nav.Initialize(firstPage);
 
-            //SimpleIoc.Default.Register<INavigationService>(() => nav);
-
             MainPage = firstPage;
-            //InitializeComponent();
 
-            //MainPage = new MainPage();
         }
         
 
